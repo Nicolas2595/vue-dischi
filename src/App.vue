@@ -38,6 +38,7 @@ main {
   background-color: #1e2d3b;
   min-height: calc(100vh - 45px);
   padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 </style>

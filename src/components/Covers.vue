@@ -30,12 +30,14 @@ export default {
         color: white;
         font-size: 18px;
         text-align: center;
+        padding-top: 20px;
     }
 
     p {
         color: lightgray;
         text-align: center;
         margin-bottom: 0;
+        padding-top: 5px;
     }
 
     div {

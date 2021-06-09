@@ -53,6 +53,7 @@ export default {
         div {
             margin: 0 1%;
             margin-bottom: 10px;
+            height: 250px;
         }
     }
 
