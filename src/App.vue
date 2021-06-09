@@ -36,6 +36,8 @@ export default {
 
 main {
   background-color: #1e2d3b;
+  min-height: calc(100vh - 45px);
+  padding-top: 50px;
 }
 
 </style>

@@ -3,7 +3,7 @@
   <section class="container">
       <div class="row">
           <div 
-          class="col-5 col-md-4 col-lg-3"
+          class="col-6 col-md-2 col-lg-2"
           v-for="cover in cover" :key="cover.id"
           >
             <Covers 
@@ -44,6 +44,16 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+    .row {
+
+        justify-content: center;
+
+        div {
+            margin: 0 1%;
+            margin-bottom: 10px;
+        }
+    }
 
 </style>

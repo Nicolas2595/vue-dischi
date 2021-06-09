@@ -18,7 +18,6 @@ export default {
 
     .template {
 
-        margin-top: 30px;
         background-color: #2e3a46;
 
         img {
