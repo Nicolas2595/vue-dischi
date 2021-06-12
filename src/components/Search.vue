@@ -7,10 +7,21 @@
            @change="$emit ('selectedGender', searchGender)"
            >
               <option value="All">All</option>
-              <option value="Rock">Rock</option>
+
+              <!-- STATICO -->
+              <!-- <option value="Rock">Rock</option>
               <option value="Pop">Pop</option>
               <option value="Jazz">Jazz</option>
-              <option value="Metal">Metal</option>
+              <option value="Metal">Metal</option> -->
+
+              <!-- DINAMICO -->
+              <option 
+              v-for="(genre,index) in genres"
+              :key="index"
+              :value="genre"
+              >
+                {{ genre }}
+              </option>
         </select>
     </div>
 </template>
@@ -23,7 +34,8 @@ export default {
             searchGender: '',
         }
         
-    }
+    },
+    props: ["genres"]
 }
 </script>
 

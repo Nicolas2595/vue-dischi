@@ -4,7 +4,10 @@
       <div class="row">
 
           <div class="search">
-              <Search @selectedGender="searchGenders" />
+              <Search 
+              @selectedGender="searchGenders" 
+              :genres="genres"
+              />
           </div>
 
           <div 
@@ -35,7 +38,8 @@ export default {
     data: function() {
         return {
             cover: [],
-            empty: ''
+            empty: [],
+            genres: []
             
         }
     },
@@ -45,13 +49,21 @@ export default {
             .then(
                 (response) => {
                     this.cover = response.data.response;
+
+                    this.cover.forEach(
+                        (element) => {
+                        // console.log(element);
+                        if(!this.genres.includes(element.genre)) {
+                            this.genres.push(element.genre)
+                        }
+                        
+                    });
                 }
             )
             .catch()
     },
     methods: {
         searchGenders: function(text) {
-            
             this.empty = text;
         }
     },
@@ -59,15 +71,12 @@ export default {
         filterGender: function() {
 
             if(this.empty == "All") {
-
                 return this.cover
-
             }
 
             const newArray = this.cover.filter(element => {
                 return element.genre.includes(this.empty)
             })
-
             return newArray
         }
     }    
